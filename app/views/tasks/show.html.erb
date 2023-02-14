@@ -1,0 +1,11 @@
+<div class="container">
+  <h2><%= @task.title %></h2>
+  <p> <%= @task.details %> </p>
+  <%= link_to "Back to list", tasks_path %>
+  <p><%= link_to edit_task_path(@task)  do %></p>
+  <i class="fa-sharp fa-solid fa-pen fs-1"></i>
+   <% end %>
+  <p><%= link_to task_path(@task), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete #{@task.title}?"} do %></p>
+<i class="fa-sharp fa-solid fa-trash-can fs-1"></i>
+ <% end %>
+</div>
